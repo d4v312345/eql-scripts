@@ -380,7 +380,7 @@ function processFormRows_(masterAreasSheet, masterFormSheet) {
       if (colE !== "" && colE !== null) {
         masterAreasSheet.getRange(insertRow, COL_B).setValue(String(colE).toUpperCase());
       }
-      masterAreasSheet.getRange(insertRow, COL_J).setValue(serialUpper);
+      masterAreasSheet.getRange(insertRow, COL_J).setNumberFormat("@").setValue(serialUpper);
       areasSerialToRow.set(serialUpper, insertRow);
       rowsAddedToAreas += 1;
       continue;
